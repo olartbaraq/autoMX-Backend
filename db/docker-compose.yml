@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  postgres:
+    container_name: automx-postgres
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=testing
+      - POSTGRES_DB=automx_db
+      - POSTGRES_HOST=localhost
+    ports:
+      - 5432:5432
